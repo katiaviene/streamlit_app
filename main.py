@@ -1,4 +1,12 @@
 import streamlit as st
+from modules.about import About
+from modules.intro import Intro
+from modules.components import Components
+
+
+
+
+
 
 
 st.set_page_config(
@@ -33,6 +41,22 @@ if button_container.button("Start the Journey"):
                               'Why Streamlit', 'Import/Config/Run', 
                               'Components', 'Deploy', 'Tips&Tricks',
                               'Community', 'Why not Streamlit'])
+    
+    with t1:
+        about = About()
+        about.render()
+    
+    with t3:
+        intro = Intro()
+        intro.render()
+        
+        
+    with t5:
+        components = Components()
+        components.render()
+        
+    
+    
     
 
 

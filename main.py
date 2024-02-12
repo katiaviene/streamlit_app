@@ -12,7 +12,7 @@ col1, col2, col3 = st.columns([0.3,1,0.2])
 
 image_container = col2.empty()
 
-image_container.image("streamlit-logo-primary-colormark-darktext.png", width=700)
+image_container.image("./images/streamlit-logo-primary-colormark-darktext.png", width=700)
 
 col1, col2, col3 = st.columns([0.35,1,0.2])
 
@@ -29,7 +29,10 @@ if button_container.button("Start the Journey"):
     title_container.empty()
     button_container.empty()
     
-    t1,t2,t3,t4,t5 = st.tabs(["About me", 'Agenda', 'What is Streamlit', 'Import/Config/Run', 'Components'])
+    t1, t2, t3, t4, t5, t6, t7, t8, t9 = st.tabs(["About me", 'Agenda', 
+                              'Why Streamlit', 'Import/Config/Run', 
+                              'Components', 'Deploy', 'Tips&Tricks',
+                              'Community', 'Why not Streamlit'])
     
 
 

@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 
 class Connections:
@@ -6,7 +7,7 @@ class Connections:
     
     def render(self):
         st.write("Connect your data from any source")
-    
+
 
 class Layout:
     
@@ -25,9 +26,24 @@ class Layout:
             elif options == "Containers":
                 st.write("Containers")
                 
+                
+class Tables:
+    
+    def read_data(self,file):
+        df = pd.read_csv(file, delimiter=';', nrows=10000)
+        return df
+    
+    def render(self):
+        st.checkbox("Build-in dataframe visualizations", True)
+        st.code("st.table(df)")
+        df = self.read_data(".\data\games_data.csv")
         
+        st.table(df.head(10))
+        st.code("st.dataframe(df)")
+        st.dataframe(df.head(10), width=1200)
         
-        
+        st.code("st.data_editor(df)")
+        st.data_editor(df, width=1200)        
         
         
         
@@ -54,7 +70,10 @@ class Components:
             with t2:
                 layout = Layout()
                 layout.render()
-                
+            
+            with t3:
+                tables = Tables()
+                tables.render()
       
                 
         

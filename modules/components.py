@@ -29,6 +29,7 @@ class Layout:
                 
 class Tables:
     
+    @st.cache(ttl=600, allow_output_mutation = True)
     def read_data(self,file):
         df = pd.read_csv(file, delimiter=';', nrows=10000)
         return df

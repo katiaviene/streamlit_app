@@ -1,8 +1,7 @@
 import streamlit as st
-from modules.about import About
 from modules.intro import Intro
 from modules.components import Components
-
+from custom_components.ccomponents import footer
 
 
 
@@ -16,11 +15,17 @@ st.set_page_config(
         initial_sidebar_state=st.session_state.get('sidebar_state', 'collapsed'),
     )
 
-col1, col2, col3 = st.columns([0.3,1,0.2])
+st.markdown(footer, unsafe_allow_html=True)
+
+
+
+
+
+col1, col2, col3 = st.columns([0.48,1,0.2])
 
 image_container = col2.empty()
 
-image_container.image("./images/streamlit-logo-primary-colormark-darktext.png", width=700)
+image_container.image("./images/logo1.png", width=500)
 
 col1, col2, col3 = st.columns([0.35,1,0.2])
 
@@ -29,7 +34,12 @@ title_container.title("Pythonic Swiss Knife  for Data Apps")
 
 
 col1, col2, col3 = st.columns([0.9,0.2,1])
-
+col2.write(" ")
+col2.write(" ")
+col2.write(" ")
+col2.write(" ")
+col2.write(" ")
+col2.write(" ")
 button_container = col2.empty()
 
 if button_container.button("Start the Journey"):
@@ -37,21 +47,18 @@ if button_container.button("Start the Journey"):
     title_container.empty()
     button_container.empty()
     
-    t1, t2, t3, t4, t5, t6, t7, t8, t9 = st.tabs(["About me", 'Agenda', 
+    t1, t2, t3, t4, t5, t6, t7= st.tabs([
                               'Why Streamlit', 'Import/Config/Run', 
                               'Components', 'Deploy', 'Tips&Tricks',
                               'Community', 'Why not Streamlit'])
     
+      
     with t1:
-        about = About()
-        about.render()
-    
-    with t3:
         intro = Intro()
         intro.render()
         
         
-    with t5:
+    with t3:
         components = Components()
         components.render()
         

@@ -25,3 +25,7 @@ text-align: right;
 <p>Ekaterina Korolkoviene // Data Engineer@BITE        <a style='display: block; text-align: left;</p>
 </div>
 """
+
+def gap(n, st):
+    for i in range (1, n+1):
+        st.write(" ")

@@ -14,14 +14,14 @@ class Layout:
     def render(self):
         st.write("Main layout components")
         
-        c1, c2 = st.columns([1,2])
+        c1, c2 = st.columns([1,3])
         
         with c1:
-            options = st.radio("", options=["Columns", "Containers"])
+            options = st.radio(label = 'ok', options=["Columns", "Containers"], label_visibility="hidden")
             
             if options == "Columns":
                 st.write("columns")
-                st.code(" c1, c2 = st.columns([1,1])")
+                st.code("c1, c2 = st.columns([1,1])")
             
             elif options == "Containers":
                 st.write("Containers")
@@ -81,7 +81,7 @@ class Components:
     
     def render(self):
         
-        col1, col2 = st.columns([0.5, 2])
+        col1, col2 = st.columns([0.4, 2])
         
         with col1:
             st.header("Components")

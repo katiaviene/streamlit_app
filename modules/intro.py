@@ -6,14 +6,15 @@ class Intro:
     
     def render(self):
         
-        col1, col2 = st.columns ([2,1])
+        c0, col1, col2 = st.columns ([0.1, 1,1.5])
         
-        with col1:
+        with col2:
             gap(3, st)
             st.image('.\images\8fiq5l.jpg')
         
-        with col2:
+        with col1:
             st.header("Why Streamlit")
+            gap(2, st)
             options = [
                 "Ease of Use", 
                 "Rapid Prototyping", 
@@ -27,5 +28,5 @@ class Intro:
             
             for opt in options:
                 st.checkbox(opt, True)
-                st.write(" ")
+                gap(1, st)
         

@@ -2,8 +2,7 @@ import streamlit as st
 from modules.intro import Intro
 from modules.components import Components
 from custom_components.ccomponents import footer, gap
-
-
+from streamlit_extras.switch_page_button import switch_page
 
 
 
@@ -32,33 +31,12 @@ if __name__ == '__main__':
     col1, col2, col3 = st.columns([0.9,0.2,1])
     gap(5, col2)
     button_container = col2.empty()
-
-    if button_container.button("Start the Journey"):
-        image_container.empty()
-        title_container.empty()
-        button_container.empty()
+    
+ 
+    
+    if button_container.button("Start the Journey", type='primary'):
         
-        t1, t2, t3, t4, t5, t6, t7= st.tabs([
-                                'Why Streamlit', 'Import/Config/Run', 
-                                'Components', 'Deploy', 'Tips&Tricks',
-                                'Community', 'Why not Streamlit'])
+        switch_page("new_page")
         
         
-        with t1:
-            intro = Intro()
-            intro.render()
-            
-            
-        with t3:
-            components = Components()
-            components.render()
-            
-        
-        
-        
-
-
-
-
-
-
+       

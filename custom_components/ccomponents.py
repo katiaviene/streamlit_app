@@ -18,7 +18,7 @@ bottom: 0;
 width: 100%;
 
 color: #FF4B4B;
-text-align: right;
+text-align: left;
 }
 </style>
 <div class="footer">

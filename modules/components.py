@@ -29,8 +29,8 @@ class Layout:
                 
 class Tables:
     
-    @st.cache(ttl=600, allow_output_mutation = True)
-    def read_data(self,file):
+    @st.cache_data(ttl=600)
+    def read_data(_self,file):
         df = pd.read_csv(file, delimiter=';', nrows=10000)
         return df
     
@@ -44,7 +44,25 @@ class Tables:
         st.dataframe(df.head(10), width=1200)
         
         st.code("st.data_editor(df)")
-        st.data_editor(df, width=1200)        
+        
+        
+        df["Battles"] = df["battles"].apply(lambda x:  [x, x+10, x-4, x+30, x-20])
+        df["Battles2"] = df["Battles"]
+        
+        st.data_editor(df, 
+                       column_config={"Battles" : st.column_config.LineChartColumn(
+                        "Battles",
+                        width="medium",
+                        y_min=0,
+                        y_max=100)},
+                       
+                       
+                       
+                       
+                       
+                       
+  
+                       width=1200)        
         
         
         

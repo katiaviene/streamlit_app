@@ -30,7 +30,6 @@ if __name__ == '__main__':
         title_container = st.empty()
         title_container.title("Pythonic Swiss Knife  for Data Apps")
 
-#one tro 
     with c2:
         gap(20, st) # little custom function/hack to make vertical gap
         button_container = st.empty()

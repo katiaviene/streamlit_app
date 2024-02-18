@@ -28,7 +28,11 @@ if __name__ == '__main__':
         Components().render()
         
     with t9:
-        st.image("./images/frame.png", width=400)
+        c1,c2 = st.columns([1,1])
+        c1.header("Check out the repo")
+        with c2:
+            gap(5, st)
+            st.image("./images/frame.png", width=400)
     
         
         

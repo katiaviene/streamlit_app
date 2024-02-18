@@ -54,7 +54,15 @@ class Tables:
                         "Battles",
                         width="medium",
                         y_min=0,
-                        y_max=100)},
+                        y_max=100),
+                                      "Battles2": st.column_config.BarChartColumn(
+                                          "Battles2",
+                                          width="medium",
+                                          y_min=0,
+                                          y_max=100
+                                      )
+                                      },
+                       
                        
                        
                        

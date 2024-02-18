@@ -27,6 +27,13 @@ if __name__ == '__main__':
     with t3:
         Components().render()
         
+        
+        
+    with t5:
+        if st.button("Hydralit"):
+            switch_page("hydralit")
+        
+        
     with t9:
         c1,c2 = st.columns([1,1])
         c1.header("Check out the repo")

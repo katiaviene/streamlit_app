@@ -205,7 +205,12 @@ def expensive_calculations():
                     
                     
                     """)
-            df = pd.read_csv('./data/automobile_data.csv', nrows=1000)
+            @st.cache_data(ttl=60)
+            def read_data(file, n):
+                df = pd.read_csv(file, nrows=n)
+                return df
+            
+            df = read_data('./data/automobile_data.csv', 1000)
             pyg.walk(df, env='Streamlit')
     with t6:
         c1, c2 = st.columns([1,6])

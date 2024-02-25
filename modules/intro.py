@@ -10,7 +10,7 @@ class Intro:
 
         with col2:
             gap(3, st)
-            st.image('.\images\8fiq5l.jpg')
+            st.image('./images/8fiq5l.jpg')
 
         with col1:
             st.header("Why Streamlit")

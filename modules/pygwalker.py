@@ -26,5 +26,4 @@ class Walker:
 
         # with hc.HyLoader('Now doing loading', hc.Loaders.standard_loaders):
         df = self.read_data('./data/automobile_data.csv', 1000)
-        st.dataframe(df)
         pyg.walk(df, env='Streamlit')

@@ -23,7 +23,7 @@ if __name__ == '__main__':
     st.markdown(footer, unsafe_allow_html=True)
     t1, t2, t3, t4, t5, t6, t7, t8= st.tabs([
         'Why Streamlit', 'Import/Config/Run',
-        'Components', 'Deploy', 'Tips&Tricks',
+        'Concepts&Components', 'Deploy', 'Tips&Tricks',
         'Community', 'Alternatives', 'Why not Streamlit'])
 
     with t1:
@@ -203,22 +203,18 @@ def expensive_calculations():
             gap(2, st)
             st.subheader("PyGWalker")
 
-            st.code("""
-                    import pygwalker as pyg 
-                    
-                    df = pd.read_csv('./data/automobile_data.csv')
-                    pyg.walk(df, env='Streamlit')
-                    
-                    
-                    
-                    """)
-            @st.cache_data(ttl=60)
-            def read_data(file, n):
-                df = pd.read_csv(file, nrows=n)
-                return df
-            
-            df = read_data('./data/automobile_data.csv', 100)
-            pyg.walk(df, env='Streamlit')
+            iframe_html = '''
+                        <iframe
+                            src="https://pydata3.streamlit.app/pygwalker/?embedded=true"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="no">
+                        </iframe>
+                    '''
+
+            st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
     with t6:
         c1, c2 = st.columns([1,6])
         c2.image("./images/community.png")

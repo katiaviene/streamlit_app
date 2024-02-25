@@ -8,29 +8,27 @@ class Concepts:
         st.subheader("Runs from top to bottom")
         st.write(" - Source code is modified")
         st.write(" - App status is changes (widget has been interacted with)")
-        
         st.image("./images/top_to_b.png")
         
         
 
 
-class Layout:
+class Widgets:
 
     def render(self):
-        st.write("Main layout components")
+        st.subheader("Main widgets")
+        iframe_html = '''
+                        <iframe
+                            src="https://docs.streamlit.io/library/api-reference/widgets/?embedded=true"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="no">
+                        </iframe>
+                    '''
 
-        c1, c2 = st.columns([1, 3])
-
-        with c1:
-            options = st.radio(label='ok', options=[
-                               "Columns", "Containers"], label_visibility="hidden")
-
-            if options == "Columns":
-                st.write("columns")
-                st.code("c1, c2 = st.columns([1,1])")
-
-            elif options == "Containers":
-                st.write("Containers")
+        st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
 
 class Charts:
     
@@ -124,7 +122,7 @@ class Components:
         col1, col2 = st.columns([0.4, 2])
 
         with col1:
-            st.header("Consepts & Components")
+            st.header("Concepts & Components")
 
         with col2:
 

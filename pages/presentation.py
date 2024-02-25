@@ -3,6 +3,7 @@ from modules.intro import Intro
 from modules.components import Components
 from modules.start import Import
 from modules.alternatives import Alternatives
+from modules.pygwalker  import Walker
 from custom_components.ccomponents import footer, gap
 from streamlit_extras.switch_page_button import switch_page
 import pygwalker as pyg
@@ -201,20 +202,7 @@ def expensive_calculations():
             st.markdown(
                 f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
             gap(2, st)
-            st.subheader("PyGWalker")
-
-            iframe_html = '''
-                        <iframe
-                            src="https://pydata3.streamlit.app/pygwalker/?embedded=true"
-                            width="100%"
-                            height="800"
-                            frameborder="0"
-                            scrolling="no">
-                        </iframe>
-                    '''
-
-            st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            Walker().render()
     with t6:
         c1, c2 = st.columns([1,6])
         c2.image("./images/community.png")

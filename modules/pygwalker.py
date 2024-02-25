@@ -1,14 +1,12 @@
 import streamlit as st
 import pygwalker as pyg
 import pandas as pd
-
+import hydralit_components as hc
 
 
 class Walker:
     
-    
-    @st.cache_data(ttl=60)
-    def read_data(_self,file, n):
+    def read_data(self,file, n):
         df = pd.read_csv(file, nrows=n)
         return df
     
@@ -26,6 +24,10 @@ class Walker:
                             
                             """)
 
-                    
-        df = self.read_data('./data/automobile_data.csv', 100)
-        pyg.walk(df, env='Streamlit')
+        # with hc.HyLoader('Now doing loading', hc.Loaders.standard_loaders):
+        df = self.read_data('./data/automobile_data.csv', 1000)
+        with  hc.HyLoader('Now doing loading', hc.Loaders.standard_loaders):
+            pyg.walk(df, env='Streamlit')
+            
+if __name__ == '__main__':
+    Walker().render()

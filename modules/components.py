@@ -57,7 +57,19 @@ class Charts:
         st.markdown(
                     f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
 
+        st.subheader("Vizzu")
+        iframe_html = '''
+                        <iframe
+                            src="https://vizzu-builder.streamlit.app/?embedded=true"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="yes">
+                        </iframe>
+                    '''
 
+        st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
 
 
 class Tables:

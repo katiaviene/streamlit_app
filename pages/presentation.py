@@ -181,6 +181,13 @@ def expensive_calculations():
 
         with tt5:
             st.subheader("Mito")
+            st.code("""
+                    from mitosheet.streamlit.v1 import spreadsheet
+                    
+                    new_dfs = spreadsheet(df)
+                    
+                    
+                    """)
             iframe_html = '''
                         <iframe
                             src="https://mito-for-st-demo.streamlit.app/?embedded=true"

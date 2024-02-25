@@ -132,7 +132,7 @@ class Components:
         with col2:
 
             t1, t2, t3, t4 = st.tabs(
-                ["Concepts", "Layot", "Tables", "Plots"])
+                ["Concepts", "Widgets", "Tables", "Plots"])
 
             with t1:
                 Concepts().render()

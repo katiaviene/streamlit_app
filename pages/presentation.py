@@ -3,7 +3,7 @@ from modules.intro import Intro
 from modules.components import Components
 from modules.start import Import
 from modules.alternatives import Alternatives
-from modules.pygwalker  import Walker
+from modules.pygwalker import Walker
 from custom_components.ccomponents import footer, gap
 from streamlit_extras.switch_page_button import switch_page
 import pygwalker as pyg
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     )
 
     st.markdown(footer, unsafe_allow_html=True)
-    t1, t2, t3, t4, t5, t6, t7, t8= st.tabs([
+    t1, t2, t3, t4, t5, t6, t7, t8 = st.tabs([
         'Why Streamlit', 'Import/Config/Run',
         'Concepts&Components', 'Deploy', 'Tips&Tricks',
         'Community', 'Alternatives', 'Why not Streamlit'])
@@ -35,10 +35,37 @@ if __name__ == '__main__':
 
     with t3:
         Components().render()
-        
+
     with t4:
-        st.subheader("Stremlit Community Cloud")
-        st.subheader("")
+        c1, c2 = st.columns([1,1])
+        with c1:
+            iframe_html = '''
+                        <iframe
+                            src="https://docs.streamlit.io/knowledge-base/tutorials/deploy/?embedded=true"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="yes">
+                        </iframe>
+                    '''
+
+            st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+        with c2:
+            iframe_html = '''
+                        <iframe
+                            src="https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099/?embedded=true"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="yes">
+                        </iframe>
+                    '''
+
+            st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            
+        
 
     with t5:
         tt1, tt2, tt3, tt4, tt5 = st.tabs(
@@ -141,7 +168,6 @@ def expensive_calculations():
 
                         """)
 
-                
                 st.code("st.cache_data.clear()")
 
         with tt3:
@@ -204,23 +230,24 @@ def expensive_calculations():
             gap(2, st)
             Walker().render()
     with t6:
-        c1, c2 = st.columns([1,6])
+        c1, c2 = st.columns([1, 6])
         c2.image("./images/community.png")
         with c1:
             gap(3, st)
             st.subheader("Support and Resources")
             st.link_button("FORUM", "https://discuss.streamlit.io/")
-            st.link_button("Youtube", "https://www.youtube.com/channel/UC3LD42rjj-Owtxsa6PwGU5Q")
+            st.link_button(
+                "Youtube", "https://www.youtube.com/channel/UC3LD42rjj-Owtxsa6PwGU5Q")
             st.link_button("Community", "https://streamlit.io/community")
         st.write("---")
-        cc1, cc2 = st.columns([1,6])
+        cc1, cc2 = st.columns([1, 6])
         cc2.image("./images/components.png")
         with cc1:
             gap(3, st)
             st.subheader("Custom Components")
             st.link_button("Components", "https://streamlit.io/components")
         st.write("---")
-        ccc1, ccc2 = st.columns([1,6]) 
+        ccc1, ccc2 = st.columns([1, 6])
         ccc1.subheader("Open Roadmap")
         with ccc2:
             iframe_html = '''
@@ -236,20 +263,16 @@ def expensive_calculations():
             st.markdown(
                 f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
 
-            
     with t7:
         Alternatives().render()
 
-    
     with t8:
-        c1, c2 = st.columns([1,1])
+        c1, c2 = st.columns([1, 1])
         gap(3, c1)
         c1.image("./images/slow.jpg")
-        list = ["Customization", "Scalability", "Heavy client-side processing", "Async Operations"]
+        list = ["Customization", "Scalability",
+                "Heavy client-side processing", "Async Operations"]
         with c2:
             for i in list:
-                gap(4,st)
+                gap(4, st)
                 st.checkbox(i, value=True, key=i)
-             
-    
-

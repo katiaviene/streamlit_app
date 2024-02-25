@@ -120,7 +120,7 @@ class Components:
         col1, col2 = st.columns([0.4, 2])
 
         with col1:
-            st.header("Consepts&Components")
+            st.header("Consepts & Components")
 
         with col2:
 

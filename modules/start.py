@@ -30,4 +30,4 @@ class Import:
             st.code("streamlit run app.py --server.port 8502 --theme.base light")
         with c2:
             gap(6, st)
-            st.image(".\images\easy2.jpg")
+            st.image("./images/easy2.jpg")

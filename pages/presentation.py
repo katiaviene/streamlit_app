@@ -51,7 +51,8 @@ if __name__ == '__main__':
 
         st.markdown(
                     f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
-        
+        st.write("---")
+        gap(3,st)
         st.subheader("Other deployment options")
         st.write("[Stremlit deployment guide](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)")
            

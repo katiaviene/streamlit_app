@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     st.markdown(footer, unsafe_allow_html=True)
 
-    st.header("Some awesome dashboard, that stakeholders dream of")
+    st.header("Some cutting-edge dashboard that fulfills stakeholders' wildest dreams")
 
     if st.button("Stop this madness"):
         switch_page("presentation")

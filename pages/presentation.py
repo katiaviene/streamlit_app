@@ -52,19 +52,9 @@ if __name__ == '__main__':
             st.markdown(
                     f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
         with c2:
-            iframe_html = '''
-                        <iframe
-                            src="https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099"
-                            width="100%"
-                            height="800"
-                            frameborder="0"
-                            scrolling="yes">
-                        </iframe>
-                    '''
-
-            st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
-            
+            st.subheader("Other deployment options")
+            st.write("[link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)")
+           
         
 
     with t5:

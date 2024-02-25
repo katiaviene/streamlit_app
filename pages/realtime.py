@@ -18,26 +18,32 @@ if __name__ == '__main__':
     st.markdown(footer, unsafe_allow_html=True)
 
     st.header("Some awesome dashboard, that stakeholders dream of")
+
     if st.button("Stop this madness"):
         switch_page("presentation")
+
     gap(2, st)
+
     placeholder = st.empty()
+
     while True:
         with placeholder:
-            c1, c2= st.columns([1, 1], gap='large')
+            c1, c2 = st.columns([1, 1], gap='large')
             x = randint(1, 100)
-            
+
             df = {"sales": [x, 200-x], "costs": [150-x, 175-x]}
             c1.dataframe(df, use_container_width=True)
             with c1:
-                cc1, cc2 = st.columns([1,1])
+                cc1, cc2 = st.columns([1, 1])
                 cc1.metric("Metric", x)
                 cc2.metric("Metric 2", 100-x)
                 fig, ax = plt.subplots()
-                ax.pie(df["sales"], labels=df["sales"], colors=['#0489B1', '#04B486'])
+                ax.pie(df["sales"], labels=df["sales"],
+                       colors=['#0489B1', '#04B486'])
                 cc1.pyplot(plt)
                 fig, ax = plt.subplots()
-                ax.pie(df["costs"], labels=df["costs"], colors=['#D7DF01', '#DF0174'])
+                ax.pie(df["costs"], labels=df["costs"],
+                       colors=['#D7DF01', '#DF0174'])
                 cc2.pyplot(plt)
             c2.bar_chart(df, height=500, color=['#8000ff', '#bf00ff'])
             sleep(2)

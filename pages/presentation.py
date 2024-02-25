@@ -37,8 +37,7 @@ if __name__ == '__main__':
         Components().render()
 
     with t4:
-        
-        
+
         iframe_html = '''
                         <iframe
                             src="https://docs.streamlit.io/knowledge-base/tutorials/deploy/?embedded=true"
@@ -50,13 +49,12 @@ if __name__ == '__main__':
                     '''
 
         st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
         st.write("---")
-        gap(3,st)
+        gap(3, st)
         st.subheader("Other deployment options")
-        st.write("[Stremlit deployment guide](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)")
-           
-        
+        st.write(
+            "[Stremlit deployment guide](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)")
 
     with t5:
         tt1, tt2, tt3, tt4, tt5 = st.tabs(

@@ -7,10 +7,8 @@ class Concepts:
     def render(self):
         st.subheader("Runs from top to bottom")
         st.write(" - Source code is modified")
-        st.write(" - App status is changes (widget has been interacted with)")
+        st.write(" - App status is changed (widget has been interacted with)")
         st.image("./images/top_to_b.png")
-        
-        
 
 
 class Widgets:
@@ -28,11 +26,11 @@ class Widgets:
                     '''
 
         st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+
 
 class Charts:
-    
-    
+
     def render(self):
         st.subheader("Standart")
         iframe_html = '''
@@ -46,7 +44,7 @@ class Charts:
                     '''
 
         st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
         st.subheader("Echarts")
         iframe_html = '''
                         <iframe
@@ -59,7 +57,7 @@ class Charts:
                     '''
 
         st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
 
         st.subheader("Vizzu")
         iframe_html = '''
@@ -73,7 +71,7 @@ class Charts:
                     '''
 
         st.markdown(
-                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+            f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
 
 
 class Tables:
@@ -136,7 +134,6 @@ class Components:
 
             with t1:
                 Concepts().render()
-        
 
             with t2:
                 Widgets().render()
@@ -144,6 +141,6 @@ class Components:
             with t3:
                 tables = Tables()
                 tables.render()
-            
+
             with t4:
                 Charts().render()

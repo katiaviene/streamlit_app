@@ -82,7 +82,7 @@ class Tables:
     def render(self):
         st.checkbox("Build-in dataframe visualizations", True)
         st.code("st.table(df)")
-        df = self.read_data(".\data\games_data.csv")
+        df = self.read_data("./data/games_data.csv")
 
         st.table(df.head(10))
         st.code("st.dataframe(df)")

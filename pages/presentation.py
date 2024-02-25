@@ -141,7 +141,7 @@ def expensive_calculations():
                         """)
 
                 st.cache_data.clear()
-                st.code("st.cache.clear_cache()")
+                st.code("st.cache_data.clear()")
 
         with tt3:
             st.subheader("Hydralit components")

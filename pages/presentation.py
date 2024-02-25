@@ -210,7 +210,7 @@ def expensive_calculations():
                 df = pd.read_csv(file, nrows=n)
                 return df
             
-            df = read_data('./data/automobile_data.csv', 1000)
+            df = read_data('./data/automobile_data.csv', 100)
             pyg.walk(df, env='Streamlit')
     with t6:
         c1, c2 = st.columns([1,6])

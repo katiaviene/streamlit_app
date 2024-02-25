@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 
 
-class Connections:
+class Concepts:
 
     def render(self):
-        st.write("Connect your data from any source")
+        st.subheader("Runs from top to bottom")
+        st.image("./images/top_to_b.png")
+        
 
 
 class Layout:
@@ -118,15 +120,15 @@ class Components:
         col1, col2 = st.columns([0.4, 2])
 
         with col1:
-            st.header("Components")
+            st.header("Consepts&Components")
 
         with col2:
 
             t1, t2, t3, t4 = st.tabs(
-                ["Connections", "Layot", "Tables", "Plots"])
+                ["Concepts", "Layot", "Tables", "Plots"])
 
             with t1:
-                connections = Connections()
+                connections = Concepts()
                 connections.render()
 
             with t2:

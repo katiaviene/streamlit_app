@@ -37,9 +37,9 @@ if __name__ == '__main__':
         Components().render()
 
     with t4:
-        c1, c2 = st.columns([1,1])
-        with c1:
-            iframe_html = '''
+        
+        
+        iframe_html = '''
                         <iframe
                             src="https://docs.streamlit.io/knowledge-base/tutorials/deploy/?embedded=true"
                             width="100%"
@@ -49,11 +49,11 @@ if __name__ == '__main__':
                         </iframe>
                     '''
 
-            st.markdown(
+        st.markdown(
                     f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
-        with c2:
-            st.subheader("Other deployment options")
-            st.write("[link](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)")
+        
+        st.subheader("Other deployment options")
+        st.write("[Stremlit deployment guide](https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099)")
            
         
 

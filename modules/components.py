@@ -6,7 +6,11 @@ class Concepts:
 
     def render(self):
         st.subheader("Runs from top to bottom")
+        st.write(" - Source code is modified")
+        st.write(" - App status is changes (widget has been interacted with)")
+        
         st.image("./images/top_to_b.png")
+        
         
 
 

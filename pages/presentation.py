@@ -168,7 +168,7 @@ def expensive_calculations():
             with c2:
                 iframe_html = '''
                         <iframe
-                            src="https://pydata3.streamlit.app/presentation/realtime"
+                            src="https://pydata3.streamlit.app/presentation/realtime/?embedded=true"
                             width="100%"
                             height="800"
                             frameborder="0"

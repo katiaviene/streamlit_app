@@ -130,12 +130,11 @@ class Components:
                 ["Concepts", "Layot", "Tables", "Plots"])
 
             with t1:
-                connections = Concepts()
-                connections.render()
+                Concepts().render()
+        
 
             with t2:
-                layout = Layout()
-                layout.render()
+                Widgets().render()
 
             with t3:
                 tables = Tables()

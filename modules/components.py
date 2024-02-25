@@ -84,6 +84,11 @@ class Tables:
         return df
 
     def render(self):
+        st.write(" - Pandas")
+        st.write(" - Pyspark")
+        st.write(" - PyArrow")
+        st.write(" - Snowpark")
+        st.write(" * numpy arrays, lists, sets, dictionaries")
         st.checkbox("Build-in dataframe visualizations", True)
         st.code("st.table(df)")
         df = self.read_data("./data/games_data.csv")

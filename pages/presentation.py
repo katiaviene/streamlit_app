@@ -21,10 +21,10 @@ if __name__ == '__main__':
     )
 
     st.markdown(footer, unsafe_allow_html=True)
-    t1, t2, t3, t4, t5, t6, t7, t8, t9 = st.tabs([
+    t1, t2, t3, t4, t5, t6, t7, t8= st.tabs([
         'Why Streamlit', 'Import/Config/Run',
         'Components', 'Deploy', 'Tips&Tricks',
-        'Community', 'Alternatives', 'Why not Streamlit', 'Repo'])
+        'Community', 'Alternatives', 'Why not Streamlit'])
 
     with t1:
         Intro().render()
@@ -140,7 +140,7 @@ def expensive_calculations():
 
                         """)
 
-                st.cache_data.clear()
+                
                 st.code("st.cache_data.clear()")
 
         with tt3:
@@ -268,9 +268,4 @@ def expensive_calculations():
                 st.checkbox(i, value=True, key=i)
              
     
-    with t9:
-        c1, c2 = st.columns([1, 1])
-        c1.header("Check out the repo")
-        with c2:
-            gap(5, st)
-            st.image("./images/frame.png", width=400)
+

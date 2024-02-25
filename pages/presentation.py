@@ -22,10 +22,10 @@ if __name__ == '__main__':
     )
 
     st.markdown(footer, unsafe_allow_html=True)
-    t1, t2, t3, t4, t5, t6, t7, t8 = st.tabs([
+    t1, t2, t3, t4, t5, t6, t7, t8, t9 = st.tabs([
         'Why Streamlit', 'Import/Config/Run',
         'Concepts&Components', 'Deploy', 'Tips&Tricks',
-        'Community', 'Alternatives', 'Why not Streamlit'])
+        'Community', 'Alternatives', 'Why not Streamlit', "👍"])
 
     with t1:
         Intro().render()
@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     with t5:
         tt1, tt2, tt3, tt4, tt5 = st.tabs(
-            ["Markdown", "Cashing", "Hydralit", "Iframe", "Tools for data analysis"])
+            ["Markdown", "Caching", "Hydralit", "Iframe", "Tools for data analysis"])
         with tt1:
             c1, c2 = st.columns([1, 2])
             st.markdown(""" <style> .font {
@@ -265,3 +265,7 @@ def expensive_calculations():
             for i in list:
                 gap(4, st)
                 st.checkbox(i, value=True, key=i)
+    with t9:
+        c1,c2,c3 = st.columns(3)
+        gap(7, c2)
+        st.title("Thank you!")

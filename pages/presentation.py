@@ -54,7 +54,7 @@ if __name__ == '__main__':
         with c2:
             iframe_html = '''
                         <iframe
-                            src="https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099/?embedded=true"
+                            src="https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099"
                             width="100%"
                             height="800"
                             frameborder="0"

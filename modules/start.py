@@ -22,10 +22,10 @@ class Import:
                     )
                     """)
 
-            st.subheader("Release the monster")
+            st.subheader("Release the beast")
             st.code("streamlit run app.py")
 
-            st.subheader("Release the monster on a leash")
+            st.subheader("Release the beast on a leash")
 
             st.code("streamlit run app.py --server.port 8502 --theme.base light")
         with c2:

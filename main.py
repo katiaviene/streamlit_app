@@ -23,7 +23,7 @@ if __name__ == '__main__':
     # chechout my custom components, such as footer
     st.markdown(footer, unsafe_allow_html=True)
 
-    c1, c2 = st.columns([3, 1])
+    c0, c1, c2 = st.columns([0.2, 3, 1])
 
     with c1:
         image_container = st.empty()

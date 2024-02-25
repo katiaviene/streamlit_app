@@ -26,6 +26,39 @@ class Layout:
             elif options == "Containers":
                 st.write("Containers")
 
+class Charts:
+    
+    
+    def render(self):
+        st.subheader("Standart")
+        iframe_html = '''
+                        <iframe
+                            src="https://docs.streamlit.io/library/api-reference/charts"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="yes">
+                        </iframe>
+                    '''
+
+        st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+        st.subheader("Echarts")
+        iframe_html = '''
+                        <iframe
+                            src="https://echarts.streamlit.app/?embedded=true"
+                            width="100%"
+                            height="800"
+                            frameborder="0"
+                            scrolling="yes">
+                        </iframe>
+                    '''
+
+        st.markdown(
+                    f'<div style="height:800px;overflow:hidden">{iframe_html}</div>', unsafe_allow_html=True)
+
+
+
 
 class Tables:
 
@@ -63,13 +96,6 @@ class Tables:
                        )
                        },
 
-
-
-
-
-
-
-
                        width=1200)
 
 
@@ -98,3 +124,6 @@ class Components:
             with t3:
                 tables = Tables()
                 tables.render()
+            
+            with t4:
+                Charts().render()

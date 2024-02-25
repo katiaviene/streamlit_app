@@ -266,6 +266,6 @@ def expensive_calculations():
                 gap(4, st)
                 st.checkbox(i, value=True, key=i)
     with t9:
-        c1,c2,c3 = st.columns(3)
-        gap(7, c2)
-        st.title("Thank you!")
+        c1, c2, c3 = st.columns(3)
+        gap(10, c2)
+        c2.title("Thank you!")
